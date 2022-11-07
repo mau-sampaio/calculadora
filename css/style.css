@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Nova Round";
+}
+
+html, body, .container{
+    width: 100%;
+    height: 100%;
+}
+
+body {
+background: rgb(203, 70, 236);
+    background: linear-gradient(295deg, rgba(203, 70, 236, 1) 0%, rgba(29, 133, 235, 1) 100%);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+}
+
+.calculadora {
+    background-color: rgb(230, 230, 230);
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 320px;
+    width: 100%;
+    box-shadow: inset 2px 2px 4px white, inset -2px -2px 4px rgba(0, 0, 0, 0.2), 20px 10px 20px -10px rgba(0, 0, 0, 0.2) ;
+}
+
+.painel {
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2), inset -2px -2px 4px white;
+    border-radius: 20px;
+    text-align: end;
+    padding: 10px 20px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: relative;
+    max-width: 280px ;
+    width: 100%;
+}
+
+.numero-atual {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.historico {
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+button {
+    border: 0;
+    font-family: "Nova Round";
+    background-color: transparent;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2), -2px -2px 10px white ;
+    border-radius: 10px;
+    min-width: 48px;
+    min-height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+button:hover{
+    background-color:#f1f2f6
+}
+
+button:active{
+    box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.2), inset -2px -2px 10px white;
+}
+
+.operacao {
+    color: #0652DD
+}
+
+.igual {
+    grid-row: 3 / 6;
+    grid-column: 4;
+}
+
+.zero {
+    grid-column: 1 / 3;
+}
+
+.limpar {
+    color: #EA2027
+}
